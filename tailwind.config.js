@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        primary: 'purple'
+        primary: '#90caf9',
+        secondary: '#1e40af',
+        tertiary: ''
       }
     },
   },

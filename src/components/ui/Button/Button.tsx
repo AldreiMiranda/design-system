@@ -9,10 +9,9 @@ export interface Props
   children: React.ReactNode;
   variant?: Variants["variant"];
   size?: Variants["size"];
-  icon?: string;
 }
 
-function Button({ children, variant, size, className, icon, ...props }: Props) {
+function Button({ children, variant, size, className, ...props }: Props) {
   return (
     <button
       className={twMerge(variants({ variant, size }), className)}
