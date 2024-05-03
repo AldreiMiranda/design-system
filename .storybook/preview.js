@@ -1,9 +1,8 @@
-import '../src/index.css';
+import '../src/global.css'
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
-   
     controls: {
       matchers: {
         color: /(background|color)$/i,

@@ -11,7 +11,13 @@ export interface Props
   size?: Variants["size"];
 }
 
-function Button({ children, variant, size, className, ...props }: Props) {
+export default function Button({
+  children,
+  variant,
+  size,
+  className,
+  ...props
+}: Props) {
   return (
     <button
       className={twMerge(variants({ variant, size }), className)}
@@ -21,5 +27,3 @@ function Button({ children, variant, size, className, ...props }: Props) {
     </button>
   );
 }
-
-export default Button;
