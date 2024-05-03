@@ -1,39 +1,40 @@
-import { fn } from "@storybook/test";
+import React from "react";
 import Button from "./Button";
+import { SimpleButtonProps } from "./Button";
+import { Meta } from "@storybook/react";
 
 export default {
   title: "Example/Button",
   component: Button,
-  tags: ["autodocs"],
+
   parameters: {
     layout: "centered",
   },
+  controls: { hideNoControlsWarning: true },
+  docs: {
+    source: {
+      type: `code`,
+    },
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["primary", "secondary", "ghost", "outlined"],
+    },
+    size: {
+      control: "select",
+      options: [`small`, `medium`, `large`],
+    },
+  },
+
+  children: "Button Primary",
 };
 
-export const Primary = {
-  args: {
-    variant: "primary",
-    size: "large",
-    children: "Button Primary",
-  },
-};
+export const BasicButton: Meta<SimpleButtonProps> = (args) => (
+  <Button {...args}>My basic first button!</Button>
+);
 
-export const Secondary = {
-  args: {
-    children: "Button",
-  },
-};
-
-export const Large = {
-  args: {
-    size: "large",
-    children: "Button",
-  },
-};
-
-export const Small = {
-  args: {
-    size: "small",
-    children: "Button",
-  },
+BasicButton.args = {
+  variant: `primary`,
+  size: `medium`,
 };

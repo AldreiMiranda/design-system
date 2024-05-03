@@ -2,7 +2,7 @@ import React from "react";
 import { variants, Variants } from "./tokens";
 import { twMerge } from "tailwind-merge";
 
-export interface Props
+export interface SimpleButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     Variants {
   className?: string;
@@ -17,7 +17,7 @@ export default function Button({
   size,
   className,
   ...props
-}: Props) {
+}: SimpleButtonProps) {
   return (
     <button
       className={twMerge(variants({ variant, size }), className)}
