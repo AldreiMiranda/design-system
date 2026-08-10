@@ -1,16 +1,19 @@
-import React from "react";
-import { icons } from "lucide-react";
+import type { LucideIcon, LucideProps } from 'lucide-react';
 
-interface Props {
-  name: keyof typeof icons;
-  color?: string;
-  size?: number;
+export interface IconProps extends Omit<LucideProps, 'ref'> {
+  icon: LucideIcon;
+  label?: string;
 }
 
-function Icon({ name, color = "black", size = 24 }: Props) {
-  const LucideIcon = icons[name];
-
-  return <LucideIcon color={color} size={size} />;
+function Icon({ icon: IconComponent, label, ...props }: IconProps) {
+  return (
+    <IconComponent
+      aria-hidden={label ? undefined : true}
+      aria-label={label}
+      role={label ? 'img' : undefined}
+      {...props}
+    />
+  );
 }
 
 export default Icon;

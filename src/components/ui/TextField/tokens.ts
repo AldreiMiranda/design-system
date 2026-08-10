@@ -1,15 +1,15 @@
 import { cva, VariantProps } from "class-variance-authority";
 
 export const variants = cva(
-  "rounded-sm inline-flex font-medium truncate cursor-pointer justify-center items-center  border border-gray-400 p-1",
+  "h-10 w-full rounded-control border bg-surface px-3 text-sm text-content outline-none transition-shadow placeholder:text-content-muted focus-visible:shadow-focus disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-70 read-only:bg-surface-muted",
   {
     defaultVariants: {
       variant: "primary",
     },
     variants: {
       variant: {
-        primary: "text-black",
-        ghost: "border-none text-black",
+        primary: "border-outline",
+        ghost: "border-transparent bg-surface-muted",
       },
     },
   }

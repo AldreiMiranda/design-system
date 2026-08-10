@@ -1,29 +1,50 @@
-import React from "react";
-import { variants, Variants } from "./tokens";
-import { twMerge } from "tailwind-merge";
+import { forwardRef } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { LoaderCircle } from 'lucide-react';
+import { twMerge } from 'tailwind-merge';
+import { variants } from './tokens';
+import type { Variants } from './tokens';
 
-export interface SimpleButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    Variants {
-  className?: string;
-  children: React.ReactNode;
-  variant?: Variants["variant"];
-  size?: Variants["size"];
+export interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>, Variants {
+  leadingIcon?: ReactNode;
+  trailingIcon?: ReactNode;
+  loading?: boolean;
 }
 
-export default function Button({
-  children,
-  variant,
-  size,
-  className,
-  ...props
-}: SimpleButtonProps) {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  {
+    children,
+    variant,
+    size,
+    className,
+    leadingIcon,
+    trailingIcon,
+    loading = false,
+    disabled,
+    type = 'button',
+    ...props
+  },
+  ref,
+) {
   return (
     <button
+      ref={ref}
+      type={type}
       className={twMerge(variants({ variant, size }), className)}
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
       {...props}
     >
-      {children}
+      {loading ? (
+        <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />
+      ) : (
+        leadingIcon
+      )}
+      <span>{children}</span>
+      {!loading && trailingIcon}
     </button>
   );
-}
+});
+
+export default Button;

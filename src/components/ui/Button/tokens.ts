@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 
 export const variants = cva(
-  "rounded-md inline-flex font-medium truncate cursor-pointer justify-center items-center text-center",
+  "inline-flex select-none items-center justify-center gap-2 rounded-control font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:shadow-focus disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
   {
     defaultVariants: {
       variant: "primary",
@@ -9,15 +9,15 @@ export const variants = cva(
     },
     variants: {
       variant: {
-        primary: "bg-primary hover:bg-blue-400 text-blue-900",
-        secondary: "bg-secondary hover:bg-blue-400",
-        ghost: "text-blue-400 hover:bg-blue-50",
-        outlined: "border border-primary text-blue-400 hover:bg-blue-50",
+        primary: "bg-brand text-brand-foreground hover:bg-brand-hover",
+        secondary: "bg-content text-white hover:bg-content-muted",
+        ghost: "text-brand hover:bg-surface-muted",
+        outlined: "border border-outline-strong bg-transparent text-brand hover:bg-surface-muted",
       },
       size: {
-        small: " px-2 py-[8px] text-xs ",
-        medium: "px-2 py-2 text-md",
-        large: "px-2 py-2  text-lg",
+        small: "h-8 px-3 text-xs",
+        medium: "h-10 px-4 text-sm",
+        large: "h-12 px-5 text-base",
       },
     },
   }

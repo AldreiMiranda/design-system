@@ -1,68 +1,84 @@
-import React, { useState } from "react";
-import { variants, Variants } from "./tokens";
-import { twMerge } from "tailwind-merge";
-import Icon from "./../Icon/Icon";
+import { forwardRef, useId } from 'react';
+import type { SelectHTMLAttributes } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { twMerge } from 'tailwind-merge';
+import { variants } from './tokens';
+import type { Variants } from './tokens';
 
-export interface Props
-  extends React.SelectHTMLAttributes<HTMLSelectElement>,
-    Variants {
-  className?: string;
-  variant?: Variants["variant"];
-  children?: React.ReactNode;
+export interface SelectProps
+  extends SelectHTMLAttributes<HTMLSelectElement>, Variants {
+  label?: string;
+  description?: string;
+  errorMessage?: string;
   placeholder?: string;
-  disabled?: boolean;
+  containerClassName?: string;
 }
 
-function Select({
-  variant,
-  className,
-  children,
-  placeholder,
-
-  ...props
-}: Props) {
-  const [disabled, setDisabled] = useState(Boolean);
+const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
+  {
+    id: providedId,
+    variant,
+    className,
+    containerClassName,
+    children,
+    label,
+    description,
+    errorMessage,
+    placeholder,
+    'aria-describedby': ariaDescribedBy,
+    'aria-invalid': ariaInvalid,
+    ...props
+  },
+  ref,
+) {
+  const generatedId = useId();
+  const id = providedId ?? generatedId;
+  const descriptionId = description ? `${id}-description` : undefined;
+  const errorId = errorMessage ? `${id}-error` : undefined;
+  const describedBy = [ariaDescribedBy, descriptionId, errorId]
+    .filter(Boolean)
+    .join(' ') || undefined;
 
   return (
-    <div className="m-20">
-      <div className="relative inline-block text-left">
-        <div className="flex justify-center items-center">
-          <button
-            type="button"
-            className="items-center inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 "
-            id="options-menu"
-            onClick={() => setDisabled(!disabled)}
-          >
-            {placeholder && <option value="">{placeholder}</option>}
-            <span className="pl-2">
-              <Icon
-                name={disabled ? "ChevronDown" : "ChevronUp"}
-                size={15}
-                color="black"
-              />
-            </span>
-          </button>
-        </div>
-        {disabled && (
-          <div
-            className=" absolute center-0 mt-0 min-w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 "
-            role="menu"
-            aria-orientation="vertical"
-          >
-            <div className="px-2 py-2" role="options-menu">
-              {children}
-            </div>
-          </div>
-        )}
+    <div className={twMerge('flex w-full flex-col gap-1.5', containerClassName)}>
+      {label && (
+        <label className="text-sm font-medium text-content" htmlFor={id}>
+          {label}
+        </label>
+      )}
+      <div className="relative">
+        <select
+          ref={ref}
+          id={id}
+          className={twMerge(
+            variants({ variant }),
+            errorMessage && 'border-content-danger',
+            className,
+          )}
+          aria-invalid={ariaInvalid ?? (errorMessage ? true : undefined)}
+          aria-describedby={describedBy}
+          {...props}
+        >
+          {placeholder && <option value="">{placeholder}</option>}
+          {children}
+        </select>
+        <ChevronDown
+          className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-content-muted"
+          aria-hidden="true"
+        />
       </div>
-
-      {/* <p> teste aqui </p>
-      <select className={twMerge(variants({ variant }), className)} {...props}>
-        {placeholder && <option value="">{placeholder}</option>}
-        {children}
-      </select> */}
+      {description && (
+        <span id={descriptionId} className="text-xs text-content-muted">
+          {description}
+        </span>
+      )}
+      {errorMessage && (
+        <span id={errorId} className="text-xs text-content-danger">
+          {errorMessage}
+        </span>
+      )}
     </div>
   );
-}
+});
 
 export default Select;

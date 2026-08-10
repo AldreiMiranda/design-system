@@ -1,36 +1,39 @@
-import React from "react";
-import { variants, Variants } from "./tokens";
-import { twMerge } from "tailwind-merge";
+import type { ElementType, HTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { variants } from './tokens';
+import type { Variants } from './tokens';
 
-const variantsMapping = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
-  h6: "h6",
-  subheading1: "h6",
-  subheading2: "h6",
-  body1: "p",
-  body2: "p",
-};
+const variantElement = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subheading1: 'h6',
+  subheading2: 'h6',
+  body1: 'p',
+  body2: 'p',
+} as const;
 
-interface Props {
-  variant: Variants["variant"];
-  className?: string;
-  children?: React.ReactNode;
+export interface TypographyProps extends HTMLAttributes<HTMLElement> {
+  variant?: NonNullable<Variants['variant']>;
+  as?: ElementType;
 }
 
-function Typography({ variant, className, children, ...props }: Props) {
-  const Component = variant ? variantsMapping[variant] : "body1";
+function Typography({
+  variant = 'body1',
+  as,
+  className,
+  children,
+  ...props
+}: TypographyProps) {
+  const Component = as ?? variantElement[variant];
 
-  return React.createElement(
-    Component,
-    {
-      ...props,
-      className: twMerge(variants({ variant }), className),
-    },
-    children
+  return (
+    <Component className={twMerge(variants({ variant }), className)} {...props}>
+      {children}
+    </Component>
   );
 }
 

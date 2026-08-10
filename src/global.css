@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[#eaeaee] text-zinc-100;
+:root {
+  --ds-color-brand: #2563eb;
+  --ds-color-brand-hover: #1d4ed8;
+  --ds-color-on-brand: #ffffff;
+  --ds-color-surface: #ffffff;
+  --ds-color-surface-muted: #f4f4f5;
+  --ds-color-text: #18181b;
+  --ds-color-text-muted: #52525b;
+  --ds-color-danger: #b91c1c;
+  --ds-color-border: #d4d4d8;
+  --ds-color-border-strong: #71717a;
+  --ds-color-focus-ring: rgb(37 99 235 / 30%);
+  --ds-radius-control: 0.5rem;
+  --ds-space-control-x: 1rem;
+  --ds-space-control-y: 0.625rem;
+  --ds-duration-fast: 150ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

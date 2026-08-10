@@ -1,0 +1,60 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+<div className="docs-hero">
+  <p className="docs-eyebrow">Aldrei Design System</p>
+  <h1>Uma linguagem compartilhada para construir produtos.</h1>
+  <p>
+    Componentes React acessíveis, tokens semânticos e orientações práticas para criar
+    experiências consistentes com mais velocidade.
+  </p>
+</div>
+
+<span className="docs-status">Versão inicial disponível</span>
+
+## Comece por aqui
+
+<div className="docs-grid">
+  <div className="docs-card">
+    <strong>Explore a biblioteca</strong>
+    <span>Consulte componentes, propriedades, variações e exemplos interativos no menu Library.</span>
+  </div>
+  <div className="docs-card">
+    <strong>Use os tokens</strong>
+    <span>Prefira decisões semânticas de cor, espaçamento e foco em vez de valores isolados.</span>
+  </div>
+  <div className="docs-card">
+    <strong>Projete com acessibilidade</strong>
+    <span>Os componentes preservam semântica, teclado, foco e comunicação com leitores de tela.</span>
+  </div>
+</div>
+
+## Instalação
+
+```bash
+npm install @aldreimiranda/design-system
+```
+
+Importe os componentes e os estilos uma única vez na aplicação:
+
+```tsx
+import { Button, TextField } from '@aldreimiranda/design-system';
+import '@aldreimiranda/design-system/styles.css';
+
+export function Formulario() {
+  return (
+    <form>
+      <TextField label="E-mail" type="email" />
+      <Button type="submit">Continuar</Button>
+    </form>
+  );
+}
+```
+
+## Princípios
+
+1. **Consistência antes de personalização:** reutilize padrões existentes antes de criar variações.
+2. **Semântica antes de aparência:** escolha o elemento correto e aplique a variante visual necessária.
+3. **Acessibilidade como requisito:** estados, foco e mensagens devem funcionar para todas as pessoas.
+4. **APIs pequenas e previsíveis:** os componentes estendem os atributos nativos sempre que possível.

@@ -1,0 +1,27 @@
+import { create } from '@storybook/theming/create';
+
+export const documentationTheme = create({
+  base: 'light',
+  brandTitle: 'Aldrei Design System',
+  brandUrl: '/',
+  brandTarget: '_self',
+  colorPrimary: '#2563eb',
+  colorSecondary: '#2563eb',
+  appBg: '#f6f8fb',
+  appContentBg: '#ffffff',
+  appPreviewBg: '#f4f4f5',
+  appBorderColor: '#e4e4e7',
+  appBorderRadius: 8,
+  fontBase: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  fontCode: '"SFMono-Regular", Consolas, "Liberation Mono", monospace',
+  textColor: '#18181b',
+  textInverseColor: '#ffffff',
+  barTextColor: '#52525b',
+  barSelectedColor: '#2563eb',
+  barHoverColor: '#1d4ed8',
+  barBg: '#ffffff',
+  inputBg: '#ffffff',
+  inputBorder: '#d4d4d8',
+  inputTextColor: '#18181b',
+  inputBorderRadius: 6,
+});

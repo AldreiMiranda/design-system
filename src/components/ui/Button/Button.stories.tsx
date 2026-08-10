@@ -1,40 +1,28 @@
-import React from "react";
-import Button from "./Button";
-import { SimpleButtonProps } from "./Button";
-import { Meta } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArrowRight, Plus } from 'lucide-react';
+import Button from './Button';
 
-export default {
-  title: "Example/Button",
+const meta = {
+  title: 'Library/Button',
   component: Button,
-
   parameters: {
-    layout: "centered",
+    layout: 'centered',
+    docs: { description: { component: 'Ação interativa para formulários, fluxos e comandos da interface.' } },
   },
-  controls: { hideNoControlsWarning: true },
-  docs: {
-    source: {
-      type: `code`,
-    },
-  },
+  tags: ['autodocs'],
+  args: { children: 'Continuar', variant: 'primary', size: 'medium' },
   argTypes: {
-    variant: {
-      control: "select",
-      options: ["primary", "secondary", "ghost", "outlined"],
-    },
-    size: {
-      control: "select",
-      options: [`small`, `medium`, `large`],
-    },
+    variant: { control: 'select', options: ['primary', 'secondary', 'ghost', 'outlined'] },
+    size: { control: 'select', options: ['small', 'medium', 'large'] },
   },
+} satisfies Meta<typeof Button>;
 
-  children: "Button Primary",
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+export const WithIcons: Story = {
+  args: { leadingIcon: <Plus className="size-4" />, trailingIcon: <ArrowRight className="size-4" /> },
 };
-
-export const BasicButton: Meta<SimpleButtonProps> = (args) => (
-  <Button {...args}>My basic first button!</Button>
-);
-
-BasicButton.args = {
-  variant: `primary`,
-  size: `medium`,
-};
+export const Loading: Story = { args: { loading: true } };
+export const Disabled: Story = { args: { disabled: true } };
