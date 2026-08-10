@@ -1,27 +1,38 @@
-@tailwind base;
+@import './roboto.css';
+@import './tokens.css';
+
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --ds-color-brand: #2563eb;
-  --ds-color-brand-hover: #1d4ed8;
-  --ds-color-on-brand: #ffffff;
-  --ds-color-surface: #ffffff;
-  --ds-color-surface-muted: #f4f4f5;
-  --ds-color-text: #18181b;
-  --ds-color-text-muted: #52525b;
-  --ds-color-danger: #b91c1c;
-  --ds-color-border: #d4d4d8;
-  --ds-color-border-strong: #71717a;
-  --ds-color-focus-ring: rgb(37 99 235 / 30%);
-  --ds-radius-control: 0.5rem;
-  --ds-space-control-x: 1rem;
-  --ds-space-control-y: 0.625rem;
-  --ds-duration-fast: 150ms;
+@keyframes ds-select-option-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@keyframes ds-select-check-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes ds-button-ripple {
+  from {
+    opacity: 0.22;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
 }

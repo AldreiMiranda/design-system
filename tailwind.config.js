@@ -6,10 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--ds-font-family-sans)'],
+      },
       colors: {
         brand: {
           DEFAULT: 'var(--ds-color-brand)',
           hover: 'var(--ds-color-brand-hover)',
+          subtle: 'var(--ds-color-brand-subtle)',
           foreground: 'var(--ds-color-on-brand)',
         },
         surface: {

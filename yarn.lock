@@ -272,6 +272,11 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz"
   "version" "8.57.0"
 
+"@fontsource-variable/roboto@^5.3.0":
+  "integrity" "sha512-BoaaZiQf8fgtxv07KXkTwx1bKz/EoqIlTXq2OOKKXINxp6qXWdnlChqV+hSaDANS49yyUASFl3OVBMMDTCIHFA=="
+  "resolved" "https://registry.npmjs.org/@fontsource-variable/roboto/-/roboto-5.3.0.tgz"
+  "version" "5.3.0"
+
 "@humanwhocodes/config-array@^0.11.14":
   "integrity" "sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.14.tgz"
@@ -469,14 +474,6 @@
     "polished" "^4.2.2"
     "ts-dedent" "^2.2.0"
 
-"@storybook/addon-links@^8.6.18":
-  "integrity" "sha512-FFlQcPRTgXoFZr2uawtf7lNc/ceIVRhU13BkJbJZKlil3+C8ORFDO1vnREzHje9JzeOWm/rzI0ay0RVetCcXzg=="
-  "resolved" "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-8.6.18.tgz"
-  "version" "8.6.18"
-  dependencies:
-    "@storybook/global" "^5.0.0"
-    "ts-dedent" "^2.0.0"
-
 "@storybook/addon-measure@8.6.18":
   "integrity" "sha512-fMEOJXgPrTm6qHlWoRM+WTLE7Mr1QBIf2ei+pujBQFcWkD6Gjc2pV8zKzvh93d+EA13wD8AmwOq1DEw9J+XH+g=="
   "resolved" "https://registry.npmjs.org/@storybook/addon-measure/-/addon-measure-8.6.18.tgz"
@@ -484,11 +481,6 @@
   dependencies:
     "@storybook/global" "^5.0.0"
     "tiny-invariant" "^1.3.1"
-
-"@storybook/addon-onboarding@^8.6.18":
-  "integrity" "sha512-F0rpD5GwIpstQlRaPYQNroIPECB//yy0v2hHQOjFtH5OnCfJXpih4M5pFYcwXsMStRwLVJWS5ywfz+Xea0hmgg=="
-  "resolved" "https://registry.npmjs.org/@storybook/addon-onboarding/-/addon-onboarding-8.6.18.tgz"
-  "version" "8.6.18"
 
 "@storybook/addon-outline@8.6.18":
   "integrity" "sha512-TErFqfCtlV2xt9B6/kskROt69TPjr6AXdHpMselaRrN1X4WEjcMk9GT9PcNP7FXqL88/VYqUb3uNMiAmpDmS/g=="
@@ -1436,11 +1428,6 @@
   "version" "0.7.0"
   dependencies:
     "clsx" "2.0.0"
-
-"classnames@^2.5.1":
-  "integrity" "sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow=="
-  "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
-  "version" "2.5.1"
 
 "clsx@2.0.0":
   "integrity" "sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q=="

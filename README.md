@@ -2,6 +2,8 @@
 
 Biblioteca inicial de componentes React com TypeScript, Tailwind CSS, CVA e Storybook. O projeto prioriza APIs pequenas, tokens semânticos e acessibilidade nativa.
 
+A tipografia padrão é Roboto Variable, distribuída localmente com o pacote e configurada pelo token `--ds-font-family-sans`.
+
 ## Desenvolvimento
 
 Requer Node.js 20 ou superior.
@@ -44,6 +46,14 @@ export function Formulario() {
   );
 }
 ```
+
+Os estilos principais não aplicam reset global. Se o produto ainda não possuir um reset, ele pode ser importado separadamente:
+
+```tsx
+import '@aldreimiranda/design-system/reset.css';
+```
+
+Para consumir apenas as propriedades CSS sem os componentes, use `@aldreimiranda/design-system/tokens.css`.
 
 O pacote está marcado como privado durante a fase inicial. Antes de publicar, revise o nome do escopo, a licença e a política de versionamento.
 

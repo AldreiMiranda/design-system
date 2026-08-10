@@ -1,6 +1,6 @@
 import Button from "./components/ui/Button/Button";
 import Icon from "./components/ui/Icon/Icon";
-import { AlarmClock, Search } from "lucide-react";
+import { AlarmClock, Folder, Search } from "lucide-react";
 import Typography from "./components/ui/Typography/Typography";
 import TextField from "./components/ui/TextField/TextField";
 import Select from "./components/ui/Select/Select";
@@ -31,12 +31,16 @@ function App() {
           description="Digite pelo menos três caracteres."
           leadingContent={<Search className="size-4" />}
         />
-        <Select label="Projeto" placeholder="Selecione um projeto">
-          <option value="1">teste 01</option>
-          <option value="2">teste 02</option>
-          <option value="3">teste 03</option>
-        </Select>
-        <Icon icon={AlarmClock} label="Alarme" size={30} />
+        <Select
+          label="Projeto"
+          placeholder="Selecione um projeto"
+          options={[
+            { value: "1", label: "Projeto 01", icon: Folder },
+            { value: "2", label: "Projeto 02", icon: Folder },
+            { value: "3", label: "Projeto 03", icon: Folder },
+          ]}
+        />
+        <Icon icon={AlarmClock} label="Alarme" size="xlarge" tone="brand" />
       </div>
     </main>
   );

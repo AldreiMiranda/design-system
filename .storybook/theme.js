@@ -12,7 +12,7 @@ export const documentationTheme = create({
   appPreviewBg: '#f4f4f5',
   appBorderColor: '#e4e4e7',
   appBorderRadius: 8,
-  fontBase: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  fontBase: '"Roboto Variable", Roboto, Arial, sans-serif',
   fontCode: '"SFMono-Regular", Consolas, "Liberation Mono", monospace',
   textColor: '#18181b',
   textInverseColor: '#ffffff',

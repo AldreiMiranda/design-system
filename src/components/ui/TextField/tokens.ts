@@ -1,18 +1,41 @@
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from 'class-variance-authority';
+import { controlHeightClasses, fieldVariantClasses } from '../shared/controlTokens';
+import type { ControlSize, FieldVariant } from '../shared/controlTokens';
 
-export const variants = cva(
-  "h-10 w-full rounded-control border bg-surface px-3 text-sm text-content outline-none transition-shadow placeholder:text-content-muted focus-visible:shadow-focus disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-70 read-only:bg-surface-muted",
+export const textFieldVariants = cva(
+  'w-full rounded-control border font-sans text-content outline-none transition-[border-color,box-shadow,background-color] duration-150 placeholder:text-content-muted focus-visible:border-brand focus-visible:shadow-focus disabled:cursor-not-allowed disabled:bg-surface-muted disabled:text-content-muted disabled:opacity-70 read-only:cursor-default read-only:bg-surface-muted',
   {
     defaultVariants: {
-      variant: "primary",
+      variant: 'primary',
+      size: 'medium',
+      invalid: false,
+      hasLeadingContent: false,
+      hasTrailingContent: false,
     },
     variants: {
       variant: {
-        primary: "border-outline",
-        ghost: "border-transparent bg-surface-muted",
+        ...fieldVariantClasses,
+      },
+      size: {
+        small: `${controlHeightClasses.small} px-3`,
+        medium: `${controlHeightClasses.medium} px-3`,
+        large: `${controlHeightClasses.large} px-4`,
+      },
+      invalid: {
+        true: 'border-content-danger focus-visible:border-content-danger',
+        false: null,
+      },
+      hasLeadingContent: {
+        true: 'pl-10',
+        false: null,
+      },
+      hasTrailingContent: {
+        true: 'pr-10',
+        false: null,
       },
     },
-  }
+  },
 );
 
-export type Variants = VariantProps<typeof variants>;
+export type TextFieldVariant = FieldVariant;
+export type TextFieldSize = ControlSize;

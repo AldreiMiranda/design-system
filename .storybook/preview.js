@@ -1,3 +1,4 @@
+import '../src/reset.css'
 import '../src/global.css'
 import './docs.css'
 import { documentationTheme } from './theme'

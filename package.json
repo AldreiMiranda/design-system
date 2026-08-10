@@ -12,7 +12,9 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/style.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./reset.css": "./dist/reset.css"
   },
   "files": [
     "dist"
@@ -22,7 +24,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "npm run typecheck && vite build && tsc -p tsconfig.build.json",
+    "build": "npm run typecheck && vite build && tsc -p tsconfig.build.json && cp src/tokens.css dist/tokens.css && cp src/reset.css dist/reset.css",
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -32,8 +34,8 @@
     "build-storybook": "STORYBOOK_DISABLE_TELEMETRY=1 storybook build"
   },
   "dependencies": {
+    "@fontsource-variable/roboto": "^5.3.0",
     "class-variance-authority": "^0.7.0",
-    "classnames": "^2.5.1",
     "lucide-react": "^0.359.0",
     "tailwind-merge": "^2.2.2"
   },
@@ -45,8 +47,6 @@
     "@chromatic-com/storybook": "^1.3.3",
     "@storybook/addon-essentials": "^8.6.18",
     "@storybook/addon-interactions": "^8.6.18",
-    "@storybook/addon-links": "^8.6.18",
-    "@storybook/addon-onboarding": "^8.6.18",
     "@storybook/blocks": "^8.6.18",
     "@storybook/manager-api": "^8.6.18",
     "@storybook/react": "^8.6.18",
@@ -68,7 +68,6 @@
     "eslint-plugin-storybook": "^0.8.0",
     "jsdom": "^24.1.3",
     "postcss": "^8.4.37",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^8.6.18",
