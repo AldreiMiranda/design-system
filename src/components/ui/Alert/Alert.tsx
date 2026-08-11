@@ -69,7 +69,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
       {onDismiss && (
         <button
           type="button"
-          className="-mr-1 -mt-1 inline-flex size-8 shrink-0 items-center justify-center rounded-control border-0 bg-transparent p-0 text-current outline-none transition-colors hover:bg-black/5 focus-visible:shadow-focus"
+          className="-mr-1 -mt-1 inline-flex size-8 shrink-0 items-center justify-center rounded-control border-0 bg-transparent p-0 text-current outline-none transition-colors hover:bg-interaction-neutral-hover active:bg-interaction-neutral-active focus-visible:shadow-focus"
           aria-label={dismissLabel}
           onClick={onDismiss}
         >

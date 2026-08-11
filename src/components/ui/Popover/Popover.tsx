@@ -102,7 +102,7 @@ export default function Popover({
           {(title || showCloseButton) && (
             <div className="flex items-start gap-3 border-0 border-b border-solid border-outline p-4">
               {title && <h3 id={titleId} className="m-0 flex-1 text-sm font-semibold">{title}</h3>}
-              {showCloseButton && <button type="button" className="-m-2 ml-auto inline-flex size-8 items-center justify-center rounded-control border-0 bg-transparent text-content-muted hover:bg-surface-muted" aria-label={closeLabel} onClick={() => setOpen(false)}><Icon icon={X} size="small" /></button>}
+              {showCloseButton && <button type="button" className="-m-2 ml-auto inline-flex size-8 items-center justify-center rounded-control border-0 bg-transparent text-content-muted outline-none hover:bg-interaction-neutral-hover active:bg-interaction-neutral-active focus-visible:shadow-focus" aria-label={closeLabel} onClick={() => setOpen(false)}><Icon icon={X} size="small" /></button>}
             </div>
           )}
           <div className="p-4 text-sm leading-relaxed">{content}</div>

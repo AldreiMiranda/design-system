@@ -15,7 +15,7 @@ export const tabsListVariants = cva('flex font-sans', {
 });
 
 export const tabsTriggerVariants = cva(
-  'relative inline-flex items-center justify-center whitespace-nowrap border-0 bg-transparent font-sans font-medium text-content-muted outline-none transition-[background-color,color,box-shadow] duration-150 hover:text-content focus-visible:shadow-focus disabled:cursor-not-allowed disabled:opacity-45',
+  'relative inline-flex items-center justify-center whitespace-nowrap border-0 bg-transparent font-sans font-medium text-content-muted outline-none transition-[background-color,color,box-shadow] duration-150 hover:bg-interaction-neutral-hover hover:text-content active:bg-interaction-neutral-active focus-visible:shadow-focus disabled:cursor-not-allowed disabled:bg-interaction-disabled-surface disabled:text-interaction-disabled-content',
   {
     defaultVariants: { variant: 'underline', size: 'medium', active: false },
     variants: {

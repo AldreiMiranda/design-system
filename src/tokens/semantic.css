@@ -22,6 +22,18 @@
   --ds-color-border: var(--ds-primitive-color-zinc-300);
   --ds-color-border-strong: var(--ds-primitive-color-zinc-500);
   --ds-color-focus-ring: var(--ds-primitive-color-focus-blue);
+  --ds-color-focus-ring-danger: var(--ds-primitive-color-focus-red);
+  --ds-color-interaction-neutral-hover: var(--ds-primitive-color-zinc-100);
+  --ds-color-interaction-neutral-active: var(--ds-primitive-color-zinc-300);
+  --ds-color-interaction-brand-hover: var(--ds-primitive-color-blue-700);
+  --ds-color-interaction-brand-active: var(--ds-primitive-color-blue-800);
+  --ds-color-interaction-brand-subtle-hover: var(--ds-primitive-color-blue-100);
+  --ds-color-interaction-brand-subtle-active: var(--ds-primitive-color-blue-200);
+  --ds-color-interaction-danger-hover: var(--ds-primitive-color-red-800);
+  --ds-color-interaction-danger-active: var(--ds-primitive-color-red-900);
+  --ds-color-interaction-disabled-surface: var(--ds-primitive-color-zinc-100);
+  --ds-color-interaction-disabled-content: var(--ds-primitive-color-zinc-500);
+  --ds-color-interaction-disabled-border: var(--ds-primitive-color-zinc-300);
 
   /* Semantic spacing */
   --ds-space-0: var(--ds-primitive-space-0);
@@ -87,6 +99,8 @@
   --ds-shadow-overlay: var(--ds-primitive-shadow-5);
   --ds-shadow-dialog: var(--ds-primitive-shadow-6);
   --ds-shadow-focus: 0 0 0 3px var(--ds-color-focus-ring);
+  --ds-shadow-focus-danger: 0 0 0 3px var(--ds-color-focus-ring-danger);
+  --ds-shadow-control-hover: var(--ds-primitive-shadow-control-hover);
 
   /* Semantic layers and motion */
   --ds-z-index-dropdown: var(--ds-primitive-z-50);
@@ -123,4 +137,16 @@
   --ds-color-border: var(--ds-primitive-color-zinc-700);
   --ds-color-border-strong: var(--ds-primitive-color-zinc-500);
   --ds-color-focus-ring: var(--ds-primitive-color-focus-blue-dark);
+  --ds-color-focus-ring-danger: var(--ds-primitive-color-focus-red-dark);
+  --ds-color-interaction-neutral-hover: var(--ds-primitive-color-zinc-800);
+  --ds-color-interaction-neutral-active: var(--ds-primitive-color-zinc-700);
+  --ds-color-interaction-brand-hover: var(--ds-primitive-color-blue-300);
+  --ds-color-interaction-brand-active: var(--ds-primitive-color-blue-200);
+  --ds-color-interaction-brand-subtle-hover: var(--ds-primitive-color-blue-900);
+  --ds-color-interaction-brand-subtle-active: var(--ds-primitive-color-blue-950);
+  --ds-color-interaction-danger-hover: var(--ds-primitive-color-red-300);
+  --ds-color-interaction-danger-active: var(--ds-primitive-color-red-400);
+  --ds-color-interaction-disabled-surface: var(--ds-primitive-color-zinc-800);
+  --ds-color-interaction-disabled-content: var(--ds-primitive-color-zinc-500);
+  --ds-color-interaction-disabled-border: var(--ds-primitive-color-zinc-700);
 }

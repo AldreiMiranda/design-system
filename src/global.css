@@ -19,7 +19,7 @@
 }
 
 .peer:hover ~ .ds-switch .ds-switch-thumb {
-  box-shadow: 0 0 0 6px rgb(37 99 235 / 8%), 0 2px 5px rgb(24 24 27 / 32%);
+  box-shadow: var(--ds-shadow-control-hover);
 }
 
 .peer:active ~ .ds-switch .ds-switch-thumb {

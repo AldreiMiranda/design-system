@@ -61,6 +61,19 @@ export default {
         status: {
           foreground: 'var(--ds-color-on-status)',
         },
+        interaction: {
+          'neutral-hover': 'var(--ds-color-interaction-neutral-hover)',
+          'neutral-active': 'var(--ds-color-interaction-neutral-active)',
+          'brand-hover': 'var(--ds-color-interaction-brand-hover)',
+          'brand-active': 'var(--ds-color-interaction-brand-active)',
+          'brand-subtle-hover': 'var(--ds-color-interaction-brand-subtle-hover)',
+          'brand-subtle-active': 'var(--ds-color-interaction-brand-subtle-active)',
+          'danger-hover': 'var(--ds-color-interaction-danger-hover)',
+          'danger-active': 'var(--ds-color-interaction-danger-active)',
+          'disabled-surface': 'var(--ds-color-interaction-disabled-surface)',
+          'disabled-content': 'var(--ds-color-interaction-disabled-content)',
+          'disabled-border': 'var(--ds-color-interaction-disabled-border)',
+        },
         outline: {
           DEFAULT: 'var(--ds-color-border)',
           strong: 'var(--ds-color-border-strong)',
@@ -78,6 +91,8 @@ export default {
         overlay: 'var(--ds-shadow-overlay)',
         dialog: 'var(--ds-shadow-dialog)',
         focus: 'var(--ds-shadow-focus)',
+        'focus-danger': 'var(--ds-shadow-focus-danger)',
+        'control-hover': 'var(--ds-shadow-control-hover)',
       },
       zIndex: {
         dropdown: 'var(--ds-z-index-dropdown)',

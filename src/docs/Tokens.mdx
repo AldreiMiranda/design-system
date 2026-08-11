@@ -29,6 +29,23 @@ document.documentElement.dataset.theme = 'dark';
 
 Use o seletor de tema na toolbar do Storybook para conferir todos os componentes nos dois modos.
 
+## Estados de interação
+
+As cores de interação são semânticas e mudam automaticamente entre os temas. Não use cores da paleta diretamente para representar estados.
+
+| Estado | Tokens principais | Aplicação |
+| --- | --- | --- |
+| Hover | `neutral-hover`, `brand-hover`, `brand-subtle-hover`, `danger-hover` | Indica que o elemento pode ser acionado |
+| Active | `neutral-active`, `brand-active`, `brand-subtle-active`, `danger-active` | Confirma o pressionamento do controle |
+| Disabled | `disabled-surface`, `disabled-content`, `disabled-border` | Mantém o estado indisponível consistente e legível |
+| Focus | `shadow-focus`, `shadow-focus-danger` | Torna a navegação por teclado visível |
+
+```tsx
+<button className="hover:bg-interaction-neutral-hover active:bg-interaction-neutral-active focus-visible:shadow-focus disabled:bg-interaction-disabled-surface">
+  Ação
+</button>
+```
+
 ## Espaçamento
 
 A escala usa uma unidade base de 4 px.

@@ -3,7 +3,7 @@ import { controlHeightClasses, fieldVariantClasses } from '../shared/controlToke
 import type { ControlSize, FieldVariant } from '../shared/controlTokens';
 
 export const selectTriggerVariants = cva(
-  'flex w-full items-center rounded-control border font-sans text-left text-content outline-none transition-[border-color,box-shadow,background-color] duration-150 focus-visible:border-brand focus-visible:shadow-focus disabled:cursor-not-allowed disabled:bg-surface-muted disabled:text-content-muted disabled:opacity-70',
+  'flex w-full items-center rounded-control border font-sans text-left text-content outline-none transition-[border-color,box-shadow,background-color] duration-150 focus-visible:border-brand focus-visible:shadow-focus disabled:cursor-not-allowed disabled:border-interaction-disabled-border disabled:bg-interaction-disabled-surface disabled:text-interaction-disabled-content',
   {
     defaultVariants: {
       variant: 'primary',
@@ -21,7 +21,7 @@ export const selectTriggerVariants = cva(
         large: `${controlHeightClasses.large} px-4 pr-11`,
       },
       invalid: {
-        true: 'border-content-danger focus-visible:border-content-danger',
+        true: 'border-content-danger focus-visible:border-content-danger focus-visible:shadow-focus-danger',
         false: null,
       },
       hasLeadingContent: {
@@ -56,11 +56,11 @@ export const selectOptionVariants = cva(
         false: null,
       },
       active: {
-        true: 'bg-brand-subtle',
+        true: 'bg-interaction-brand-subtle-hover',
         false: null,
       },
       disabled: {
-        true: 'pointer-events-none opacity-45',
+        true: 'pointer-events-none bg-interaction-disabled-surface text-interaction-disabled-content',
         false: null,
       },
     },

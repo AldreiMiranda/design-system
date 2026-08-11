@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 import type { ControlSize } from '../shared/controlTokens';
 
 export const switchTrackVariants = cva(
-  'ds-switch relative inline-flex shrink-0 rounded-full transition-[box-shadow,opacity] duration-[var(--ds-duration-normal)] peer-focus-visible:shadow-focus peer-disabled:cursor-not-allowed peer-disabled:opacity-45',
+  'ds-switch relative inline-flex shrink-0 rounded-full transition-[box-shadow,opacity] duration-[var(--ds-duration-normal)] peer-focus-visible:shadow-focus peer-disabled:cursor-not-allowed peer-disabled:opacity-60',
   {
     defaultVariants: { size: 'medium', invalid: false },
     variants: {
@@ -12,7 +12,7 @@ export const switchTrackVariants = cva(
         large: 'h-8 w-[52px]',
       },
       invalid: {
-        true: 'peer-focus-visible:shadow-[0_0_0_3px_rgb(185_28_28/0.22)]',
+        true: 'peer-focus-visible:shadow-focus-danger',
         false: null,
       },
     },
@@ -38,7 +38,7 @@ export const switchRailVariants = cva(
 );
 
 export const switchThumbVariants = cva(
-  'ds-switch-thumb absolute left-1 top-1 rounded-full bg-surface shadow-[0_2px_5px_rgb(24_24_27/0.35)] transition-[transform,box-shadow] duration-[var(--ds-duration-normal)] ease-[var(--ds-ease-emphasized)]',
+  'ds-switch-thumb absolute left-1 top-1 rounded-full bg-surface shadow-control transition-[transform,box-shadow] duration-[var(--ds-duration-normal)] ease-[var(--ds-ease-emphasized)]',
   {
     defaultVariants: { size: 'medium' },
     variants: {

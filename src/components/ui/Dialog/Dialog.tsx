@@ -151,7 +151,7 @@ export const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(functi
       {showCloseButton && (
         <button
           type="button"
-          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-control border-0 bg-transparent p-0 text-content-muted outline-none transition-colors hover:bg-surface-muted hover:text-content focus-visible:shadow-focus"
+          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-control border-0 bg-transparent p-0 text-content-muted outline-none transition-colors hover:bg-interaction-neutral-hover hover:text-content active:bg-interaction-neutral-active focus-visible:shadow-focus"
           aria-label={closeLabel}
           onClick={close}
         >

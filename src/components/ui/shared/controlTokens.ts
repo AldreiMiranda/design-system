@@ -9,6 +9,6 @@ export const controlHeightClasses: Record<ControlSize, string> = {
 
 export const fieldVariantClasses: Record<FieldVariant, string> = {
   primary: 'border-outline bg-surface',
-  filled: 'border-transparent bg-surface-muted hover:border-outline',
-  ghost: 'border-transparent bg-transparent hover:bg-surface-muted',
+  filled: 'border-transparent bg-surface-muted hover:border-outline hover:bg-interaction-neutral-hover',
+  ghost: 'border-transparent bg-transparent hover:bg-interaction-neutral-hover active:bg-interaction-neutral-active',
 };
