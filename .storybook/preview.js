@@ -21,7 +21,7 @@ const preview = {
           'Introduction',
           'Changelog',
           'Library',
-          ['Button', 'TextField', 'Select', 'Typography', 'Icon'],
+          ['Button', 'Checkbox', 'TextField', 'Select', 'Typography', 'Icon'],
         ],
       },
     },

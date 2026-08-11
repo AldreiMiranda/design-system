@@ -1,5 +1,8 @@
 import './global.css';
 
+export { default as Checkbox } from './components/ui/Checkbox/Checkbox';
+export type { CheckboxProps } from './components/ui/Checkbox/Checkbox';
+export type { CheckboxSize } from './components/ui/Checkbox/tokens';
 export { default as Button } from './components/ui/Button/Button';
 export type { ButtonProps } from './components/ui/Button/Button';
 export type { ButtonSize, ButtonVariant } from './components/ui/Button/tokens';
