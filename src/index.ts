@@ -3,6 +3,14 @@ import './global.css';
 export { default as Alert } from './components/ui/Alert/Alert';
 export type { AlertProps } from './components/ui/Alert/Alert';
 export type { AlertTone } from './components/ui/Alert/tokens';
+export { default as Badge } from './components/ui/Badge/Badge';
+export type { BadgeProps } from './components/ui/Badge/Badge';
+export type {
+  BadgeOverlap,
+  BadgePosition,
+  BadgeTone,
+  BadgeVariant,
+} from './components/ui/Badge/tokens';
 export { default as Checkbox } from './components/ui/Checkbox/Checkbox';
 export type { CheckboxProps } from './components/ui/Checkbox/Checkbox';
 export type { CheckboxSize } from './components/ui/Checkbox/tokens';
