@@ -4,6 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.peer:checked ~ .ds-switch .ds-switch-rail {
+  background-color: var(--ds-color-brand);
+  opacity: 1;
+}
+
+.peer:checked ~ .ds-switch[data-size='small'] .ds-switch-thumb,
+.peer:checked ~ .ds-switch[data-size='medium'] .ds-switch-thumb {
+  transform: translateX(1rem);
+}
+
+.peer:checked ~ .ds-switch[data-size='large'] .ds-switch-thumb {
+  transform: translateX(1.25rem);
+}
+
+.peer:hover ~ .ds-switch .ds-switch-thumb {
+  box-shadow: 0 0 0 6px rgb(37 99 235 / 8%), 0 2px 5px rgb(24 24 27 / 32%);
+}
+
+.peer:active ~ .ds-switch .ds-switch-thumb {
+  scale: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-switch,
+  .ds-switch-rail,
+  .ds-switch-thumb {
+    transition: none;
+  }
+}
+
 @keyframes ds-select-option-in {
   from {
     opacity: 0;
