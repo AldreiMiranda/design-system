@@ -15,6 +15,13 @@ export type { SelectSize, SelectVariant } from './components/ui/Select/tokens';
 export { default as Switch } from './components/ui/Switch/Switch';
 export type { SwitchProps } from './components/ui/Switch/Switch';
 export type { SwitchSize } from './components/ui/Switch/tokens';
+export { default as Textarea } from './components/ui/Textarea/Textarea';
+export type { TextareaProps } from './components/ui/Textarea/Textarea';
+export type {
+  TextareaResize,
+  TextareaSize,
+  TextareaVariant,
+} from './components/ui/Textarea/tokens';
 export { default as TextField } from './components/ui/TextField/TextField';
 export type { TextFieldProps } from './components/ui/TextField/TextField';
 export type { TextFieldSize, TextFieldVariant } from './components/ui/TextField/tokens';
