@@ -51,6 +51,8 @@ export type { DialogSize } from './components/ui/Dialog/tokens';
 export { default as Icon } from './components/ui/Icon/Icon';
 export type { IconProps } from './components/ui/Icon/Icon';
 export type { IconSize, IconTone } from './components/ui/Icon/tokens';
+export { default as Popover } from './components/ui/Popover/Popover';
+export type { PopoverAlign, PopoverPlacement, PopoverProps } from './components/ui/Popover/Popover';
 export { default as Select } from './components/ui/Select/Select';
 export type { SelectOption, SelectProps } from './components/ui/Select/Select';
 export type { SelectSize, SelectVariant } from './components/ui/Select/tokens';
@@ -81,6 +83,9 @@ export type {
   ToastProviderProps,
 } from './components/ui/Toast/Toast';
 export type { ToastPosition, ToastTone } from './components/ui/Toast/tokens';
+export { default as Tooltip } from './components/ui/Tooltip/Tooltip';
+export type { TooltipAlign, TooltipPlacement, TooltipProps } from './components/ui/Tooltip/Tooltip';
+export type { TooltipAppearance } from './components/ui/Tooltip/tokens';
 export { default as Typography } from './components/ui/Typography/Typography';
 export type { TypographyProps } from './components/ui/Typography/Typography';
 export type {
