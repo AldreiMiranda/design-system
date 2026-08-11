@@ -1,5 +1,7 @@
 import './global.css';
 
+export { default as Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './components/ui/Accordion/Accordion';
+export type { AccordionItemProps, AccordionProps } from './components/ui/Accordion/Accordion';
 export { default as Alert } from './components/ui/Alert/Alert';
 export type { AlertProps } from './components/ui/Alert/Alert';
 export type { AlertTone } from './components/ui/Alert/tokens';
@@ -65,6 +67,9 @@ export type { SpinnerSize, SpinnerTone } from './components/ui/Spinner/tokens';
 export { default as Switch } from './components/ui/Switch/Switch';
 export type { SwitchProps } from './components/ui/Switch/Switch';
 export type { SwitchSize } from './components/ui/Switch/tokens';
+export { default as Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/Tabs/Tabs';
+export type { TabsContentProps, TabsProps, TabsTriggerProps } from './components/ui/Tabs/Tabs';
+export type { TabsOrientation, TabsSize, TabsVariant } from './components/ui/Tabs/tokens';
 export { default as Textarea } from './components/ui/Textarea/Textarea';
 export type { TextareaProps } from './components/ui/Textarea/Textarea';
 export type {

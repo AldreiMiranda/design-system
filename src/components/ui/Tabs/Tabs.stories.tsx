@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import Tabs, { TabsContent, TabsList, TabsTrigger } from './Tabs';
+
+const meta = { title: 'Library/Tabs', component: Tabs, parameters: { layout: 'centered', docs: { description: { component: 'Organiza conteúdo relacionado em painéis alternáveis com navegação completa por teclado.' } } }, tags: ['autodocs'], args: { defaultValue: 'overview', className: 'w-[520px]' }, argTypes: { variant: { control: 'select', options: ['underline', 'pills'] }, size: { control: 'select', options: ['small', 'medium', 'large'] }, orientation: { control: 'select', options: ['horizontal', 'vertical'] } } } satisfies Meta<typeof Tabs>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = { render: (args) => <Tabs {...args}><TabsList><TabsTrigger value="overview">Visão geral</TabsTrigger><TabsTrigger value="activity">Atividade</TabsTrigger><TabsTrigger value="settings">Configurações</TabsTrigger></TabsList><TabsContent value="overview">Resumo e indicadores principais do projeto.</TabsContent><TabsContent value="activity">Histórico recente de alterações e comentários.</TabsContent><TabsContent value="settings">Preferências e permissões do projeto.</TabsContent></Tabs> };
+export const Pills: Story = { args: { variant: 'pills' }, render: (args) => <Tabs {...args}><TabsList><TabsTrigger value="overview">Visão geral</TabsTrigger><TabsTrigger value="activity">Atividade</TabsTrigger><TabsTrigger value="settings">Configurações</TabsTrigger></TabsList><TabsContent value="overview">Conteúdo da visão geral.</TabsContent><TabsContent value="activity">Conteúdo de atividade.</TabsContent><TabsContent value="settings">Conteúdo de configurações.</TabsContent></Tabs> };
+export const WithDisabledTab: Story = { render: (args) => <Tabs {...args}><TabsList><TabsTrigger value="overview">Disponível</TabsTrigger><TabsTrigger value="future" disabled>Em breve</TabsTrigger></TabsList><TabsContent value="overview">Este painel está disponível.</TabsContent></Tabs> };
