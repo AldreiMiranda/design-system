@@ -17,7 +17,7 @@ export const buttonVariants = cva(
         secondary: 'bg-surface-muted text-content hover:bg-outline',
         outlined: 'border-outline-strong bg-surface text-content hover:bg-surface-muted',
         ghost: 'bg-transparent text-brand hover:bg-brand-subtle',
-        danger: 'bg-content-danger text-white hover:brightness-90',
+        danger: 'bg-content-danger text-status-foreground hover:brightness-90',
       },
       size: {
         small: `${controlHeightClasses.small} px-3`,

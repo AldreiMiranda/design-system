@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const alertVariants = cva(
-  'relative flex w-full items-start gap-3 rounded-control border border-solid p-4 font-sans text-sm shadow-[0_1px_2px_rgb(24_24_27/0.04)]',
+  'relative flex w-full items-start gap-component-gap rounded-control border border-solid p-ds-4 font-sans text-body-small shadow-subtle',
   {
     defaultVariants: { tone: 'info' },
     variants: {

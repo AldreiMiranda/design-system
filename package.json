@@ -14,6 +14,8 @@
     },
     "./styles.css": "./dist/style.css",
     "./tokens.css": "./dist/tokens.css",
+    "./tokens/primitives.css": "./dist/tokens/primitives.css",
+    "./tokens/semantic.css": "./dist/tokens/semantic.css",
     "./reset.css": "./dist/reset.css"
   },
   "files": [
@@ -24,7 +26,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "npm run typecheck && vite build && tsc -p tsconfig.build.json && cp src/tokens.css dist/tokens.css && cp src/reset.css dist/reset.css",
+    "build": "npm run typecheck && vite build && tsc -p tsconfig.build.json && mkdir -p dist/tokens && cp src/tokens.css dist/tokens.css && cp src/tokens/primitives.css dist/tokens/primitives.css && cp src/tokens/semantic.css dist/tokens/semantic.css && cp src/reset.css dist/reset.css",
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

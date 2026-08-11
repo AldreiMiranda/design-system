@@ -1,0 +1,108 @@
+:root {
+  /* Color palette */
+  --ds-primitive-color-white: #ffffff;
+  --ds-primitive-color-zinc-50: #fafafa;
+  --ds-primitive-color-zinc-100: #f4f4f5;
+  --ds-primitive-color-zinc-300: #d4d4d8;
+  --ds-primitive-color-zinc-500: #71717a;
+  --ds-primitive-color-zinc-600: #52525b;
+  --ds-primitive-color-zinc-700: #3f3f46;
+  --ds-primitive-color-zinc-800: #27272a;
+  --ds-primitive-color-zinc-900: #18181b;
+  --ds-primitive-color-blue-50: #eff6ff;
+  --ds-primitive-color-blue-300: #93c5fd;
+  --ds-primitive-color-blue-400: #60a5fa;
+  --ds-primitive-color-blue-950: #172554;
+  --ds-primitive-color-blue-600: #2563eb;
+  --ds-primitive-color-blue-700: #1d4ed8;
+  --ds-primitive-color-red-50: #fef2f2;
+  --ds-primitive-color-red-400: #f87171;
+  --ds-primitive-color-red-950: #450a0a;
+  --ds-primitive-color-red-700: #b91c1c;
+  --ds-primitive-color-green-50: #f0fdf4;
+  --ds-primitive-color-green-400: #4ade80;
+  --ds-primitive-color-green-950: #052e16;
+  --ds-primitive-color-green-700: #15803d;
+  --ds-primitive-color-amber-50: #fffbeb;
+  --ds-primitive-color-amber-300: #fcd34d;
+  --ds-primitive-color-amber-950: #451a03;
+  --ds-primitive-color-amber-700: #a16207;
+  --ds-primitive-color-sky-50: #f0f9ff;
+  --ds-primitive-color-sky-300: #7dd3fc;
+  --ds-primitive-color-sky-950: #082f49;
+  --ds-primitive-color-sky-700: #0369a1;
+  --ds-primitive-color-focus-blue: rgb(37 99 235 / 30%);
+  --ds-primitive-color-focus-blue-dark: rgb(96 165 250 / 40%);
+
+  /* Spacing: base unit of 4px */
+  --ds-primitive-space-0: 0;
+  --ds-primitive-space-1: 0.25rem;
+  --ds-primitive-space-2: 0.5rem;
+  --ds-primitive-space-3: 0.75rem;
+  --ds-primitive-space-4: 1rem;
+  --ds-primitive-space-5: 1.25rem;
+  --ds-primitive-space-6: 1.5rem;
+  --ds-primitive-space-8: 2rem;
+  --ds-primitive-space-10: 2.5rem;
+  --ds-primitive-space-12: 3rem;
+  --ds-primitive-space-16: 4rem;
+
+  /* Typography scale */
+  --ds-primitive-font-family-sans: 'Roboto Variable', 'Roboto', Arial, sans-serif;
+  --ds-primitive-font-size-12: 0.75rem;
+  --ds-primitive-font-size-14: 0.875rem;
+  --ds-primitive-font-size-16: 1rem;
+  --ds-primitive-font-size-18: 1.125rem;
+  --ds-primitive-font-size-20: 1.25rem;
+  --ds-primitive-font-size-24: 1.5rem;
+  --ds-primitive-font-size-30: 1.875rem;
+  --ds-primitive-font-size-36: 2.25rem;
+  --ds-primitive-font-size-48: 3rem;
+  --ds-primitive-line-height-110: 1.1;
+  --ds-primitive-line-height-125: 1.25;
+  --ds-primitive-line-height-150: 1.5;
+  --ds-primitive-line-height-162: 1.625;
+  --ds-primitive-font-weight-400: 400;
+  --ds-primitive-font-weight-500: 500;
+  --ds-primitive-font-weight-600: 600;
+  --ds-primitive-font-weight-700: 700;
+  --ds-primitive-letter-spacing-tight: -0.02em;
+  --ds-primitive-letter-spacing-normal: 0;
+  --ds-primitive-letter-spacing-wide: 0.12em;
+
+  /* Size scale */
+  --ds-primitive-size-10: 0.625rem;
+  --ds-primitive-size-12: 0.75rem;
+  --ds-primitive-size-16: 1rem;
+  --ds-primitive-size-20: 1.25rem;
+  --ds-primitive-size-24: 1.5rem;
+  --ds-primitive-size-32: 2rem;
+  --ds-primitive-size-40: 2.5rem;
+  --ds-primitive-size-48: 3rem;
+  --ds-primitive-size-384: 24rem;
+  --ds-primitive-size-512: 32rem;
+  --ds-primitive-size-672: 42rem;
+
+  /* Radius */
+  --ds-primitive-radius-8: 0.5rem;
+
+  /* Elevation scale */
+  --ds-primitive-shadow-1: 0 1px 2px rgb(24 24 27 / 0.04);
+  --ds-primitive-shadow-2: 0 2px 5px rgb(24 24 27 / 0.35);
+  --ds-primitive-shadow-3: 0 10px 28px -14px rgb(24 24 27 / 0.24), 0 2px 8px -4px rgb(24 24 27 / 0.12);
+  --ds-primitive-shadow-4: 0 16px 36px -16px rgb(24 24 27 / 0.28), 0 4px 12px -6px rgb(24 24 27 / 0.14);
+  --ds-primitive-shadow-5: 0 18px 48px -18px rgb(24 24 27 / 0.35), 0 6px 16px -10px rgb(24 24 27 / 0.2);
+  --ds-primitive-shadow-6: 0 28px 80px -24px rgb(24 24 27 / 0.45), 0 12px 32px -16px rgb(24 24 27 / 0.28);
+  --ds-primitive-shadow-tooltip: 0 10px 28px -12px rgb(24 24 27 / 0.3), 0 2px 8px -4px rgb(24 24 27 / 0.16);
+
+  /* Layer and motion scales */
+  --ds-primitive-z-50: 50;
+  --ds-primitive-z-100: 100;
+  --ds-primitive-z-105: 105;
+  --ds-primitive-z-110: 110;
+  --ds-primitive-z-120: 120;
+  --ds-primitive-duration-150: 150ms;
+  --ds-primitive-duration-220: 220ms;
+  --ds-primitive-duration-320: 320ms;
+  --ds-primitive-easing-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+}

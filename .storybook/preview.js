@@ -5,6 +5,26 @@ import { documentationTheme } from './theme'
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
+  globalTypes: {
+    theme: {
+      description: 'Tema visual do design system',
+      defaultValue: 'light',
+      toolbar: {
+        icon: 'paintbrush',
+        items: [
+          { value: 'light', title: 'Claro', icon: 'sun' },
+          { value: 'dark', title: 'Escuro', icon: 'moon' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  decorators: [
+    (Story, context) => {
+      document.documentElement.dataset.theme = context.globals.theme;
+      return Story();
+    },
+  ],
   parameters: {
     layout: 'padded',
     backgrounds: {
@@ -19,6 +39,8 @@ const preview = {
       storySort: {
         order: [
           'Introduction',
+          'Foundations',
+          ['Tokens'],
           'Changelog',
           'Library',
           ['Accordion', 'Alert', 'Badge', 'Button', 'Card', 'Checkbox', 'Dialog', 'Popover', 'Switch', 'Tabs', 'TextField', 'Textarea', 'Select', 'Spinner', 'Skeleton', 'Toast', 'Tooltip', 'Typography', 'Icon'],

@@ -1,0 +1,130 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Tokens" />
+
+# Tokens
+
+Tokens concentram as decisões visuais do design system. Eles estão separados em duas camadas para distinguir valores da identidade visual de decisões de uso.
+
+| Camada | Responsabilidade | Exemplo |
+| --- | --- | --- |
+| Primitiva | Escalas e valores brutos, sem contexto de uso | `--ds-primitive-color-blue-600` |
+| Semântica | Intenção e papel do valor na interface | `--ds-color-brand` |
+
+Os componentes consomem apenas tokens semânticos. Dessa forma, `--ds-color-brand` pode apontar para outra cor primitiva em um tema diferente sem exigir alterações nos componentes.
+
+## Temas
+
+O tema claro é usado por padrão. Para ativar o tema escuro, defina `data-theme="dark"` no elemento raiz da aplicação. Aplicar o atributo em `html` também garante que componentes renderizados em portais recebam o tema.
+
+```tsx
+document.documentElement.dataset.theme = 'dark';
+```
+
+```html
+<html data-theme="dark">
+  <!-- aplicação -->
+</html>
+```
+
+Use o seletor de tema na toolbar do Storybook para conferir todos os componentes nos dois modos.
+
+## Espaçamento
+
+A escala usa uma unidade base de 4 px.
+
+<div style={{ display: 'grid', gap: 12 }}>
+  {[
+    ['1', '4px'], ['2', '8px'], ['3', '12px'], ['4', '16px'], ['5', '20px'],
+    ['6', '24px'], ['8', '32px'], ['10', '40px'], ['12', '48px'], ['16', '64px'],
+  ].map(([token, value]) => (
+    <div key={token} style={{ display: 'grid', gridTemplateColumns: '90px 80px 1fr', alignItems: 'center', gap: 16 }}>
+      <code>space-{token}</code><span>{value}</span>
+      <span style={{ width: `var(--ds-space-${token})`, height: 12, borderRadius: 4, background: 'var(--ds-color-brand)' }} />
+    </div>
+  ))}
+</div>
+
+Aliases disponíveis: `field-gap`, `component-gap`, `control-x`, `control-y` e `container`.
+
+## Tipografia
+
+Todos os estilos usam Roboto e combinam tamanho, altura de linha, peso e espaçamento entre letras.
+
+<div style={{ display: 'grid', gap: 16 }}>
+  {[
+    ['heading-1', 'Título principal'], ['heading-2', 'Título de seção'],
+    ['heading-4', 'Título de componente'], ['heading-6', 'Subtítulo'],
+    ['body', 'Texto de corpo'], ['body-small', 'Texto auxiliar'], ['caption', 'Legenda'],
+  ].map(([token, label]) => (
+    <div key={token}>
+      <code>text-{token}</code>
+      <div style={{ fontFamily: 'var(--ds-font-family-sans)', fontSize: `var(--ds-font-size-${token})`, marginTop: 4 }}>{label}</div>
+    </div>
+  ))}
+</div>
+
+Pesos: `regular` (400), `medium` (500), `semibold` (600) e `bold` (700).
+
+## Tamanhos
+
+| Grupo | Tokens | Valores |
+| --- | --- | --- |
+| Controles | `small`, `medium`, `large` | 32 px, 40 px, 48 px |
+| Ícones | `xsmall`, `small`, `medium`, `large`, `xlarge` | 12 px, 16 px, 20 px, 24 px, 32 px |
+| Overlays | `small`, `medium`, `large` | 384 px, 512 px, 672 px |
+
+## Sombras
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 24 }}>
+  {['subtle', 'control', 'card', 'dropdown', 'tooltip', 'overlay', 'dialog'].map((token) => (
+    <div key={token} style={{ padding: 24, borderRadius: 10, background: 'var(--ds-color-surface)', boxShadow: `var(--ds-shadow-${token})` }}>
+      <code>{token}</code>
+    </div>
+  ))}
+</div>
+
+## Camadas (z-index)
+
+| Token | Valor | Uso |
+| --- | ---: | --- |
+| `dropdown` | 50 | Menus ancorados, como Select |
+| `overlay` | 100 | Fundo e superfícies modais |
+| `popover` | 105 | Conteúdo flutuante interativo |
+| `tooltip` | 110 | Dicas sobre outros elementos |
+| `toast` | 120 | Mensagens globais temporárias |
+
+## Uso
+
+Nos componentes da biblioteca, prefira as classes semânticas:
+
+```tsx
+<div className="z-popover max-w-overlay-medium p-ds-4 shadow-overlay">
+  Conteúdo flutuante
+</div>
+```
+
+Em CSS externo, os mesmos valores estão disponíveis como custom properties:
+
+```css
+.surface {
+  padding: var(--ds-space-4);
+  box-shadow: var(--ds-shadow-card);
+  z-index: var(--ds-z-index-overlay);
+}
+```
+
+## Importação
+
+O ponto de entrada recomendado carrega as duas camadas na ordem correta:
+
+```css
+@import '@aldreimiranda/design-system/tokens.css';
+```
+
+Para integrações avançadas, cada camada também pode ser importada separadamente:
+
+```css
+@import '@aldreimiranda/design-system/tokens/primitives.css';
+@import '@aldreimiranda/design-system/tokens/semantic.css';
+```

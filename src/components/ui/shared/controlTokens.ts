@@ -2,9 +2,9 @@ export type ControlSize = 'small' | 'medium' | 'large';
 export type FieldVariant = 'primary' | 'filled' | 'ghost';
 
 export const controlHeightClasses: Record<ControlSize, string> = {
-  small: 'h-8 text-xs',
-  medium: 'h-10 text-sm',
-  large: 'h-12 text-base',
+  small: 'h-control-small text-caption',
+  medium: 'h-control-medium text-body-small',
+  large: 'h-control-large text-body',
 };
 
 export const fieldVariantClasses: Record<FieldVariant, string> = {

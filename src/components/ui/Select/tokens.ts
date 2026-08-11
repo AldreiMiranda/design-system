@@ -33,7 +33,7 @@ export const selectTriggerVariants = cva(
 );
 
 export const selectMenuVariants = cva(
-  'absolute left-0 top-full z-50 mt-1 max-h-60 w-full origin-top overflow-y-auto rounded-control border border-outline p-1 font-sans shadow-[0_16px_36px_-16px_rgb(24_24_27/0.28),0_4px_12px_-6px_rgb(24_24_27/0.14)] transition-[opacity,transform,filter] duration-[var(--ds-duration-normal)] ease-[var(--ds-ease-emphasized)] motion-reduce:transition-none',
+  'absolute left-0 top-full z-dropdown mt-ds-1 max-h-60 w-full origin-top overflow-y-auto rounded-control border border-outline p-ds-1 font-sans shadow-dropdown transition-[opacity,transform,filter] duration-[var(--ds-duration-normal)] ease-[var(--ds-ease-emphasized)] motion-reduce:transition-none',
   {
     defaultVariants: { variant: 'primary' },
     variants: {

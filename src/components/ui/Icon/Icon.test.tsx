@@ -8,7 +8,7 @@ describe('Icon', () => {
     const { rerender } = render(<Icon icon={Search} data-testid="icon" />);
     expect(screen.getByTestId('icon')).toHaveAttribute('aria-hidden', 'true');
     rerender(<Icon icon={Search} label="Buscar" tone="brand" size="large" />);
-    expect(screen.getByRole('img', { name: 'Buscar' })).toHaveClass('text-brand', 'size-6');
+    expect(screen.getByRole('img', { name: 'Buscar' })).toHaveClass('text-brand', 'size-icon-large');
   });
 
   it('aceita tamanho numérico zero', () => {

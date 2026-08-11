@@ -6,12 +6,12 @@ export const badgeIndicatorVariants = cva(
     defaultVariants: { tone: 'brand', variant: 'standard', invisible: false },
     variants: {
       tone: {
-        neutral: 'bg-content text-white',
+        neutral: 'bg-content text-surface',
         brand: 'bg-brand text-brand-foreground',
-        info: 'bg-[var(--ds-color-info)] text-white',
-        success: 'bg-[var(--ds-color-success)] text-white',
-        warning: 'bg-[var(--ds-color-warning)] text-white',
-        danger: 'bg-content-danger text-white',
+        info: 'bg-[var(--ds-color-info)] text-status-foreground',
+        success: 'bg-[var(--ds-color-success)] text-status-foreground',
+        warning: 'bg-[var(--ds-color-warning)] text-status-foreground',
+        danger: 'bg-content-danger text-status-foreground',
       },
       variant: {
         standard: 'h-5 min-w-5 px-1.5 text-xs',

@@ -9,7 +9,7 @@ describe('Typography', () => {
     render(<Typography ref={ref} variant="h2" as="a" href="#conteudo" tone="brand">Título visual</Typography>);
     const typography = screen.getByRole('link', { name: 'Título visual' });
     expect(typography).toHaveAttribute('href', '#conteudo');
-    expect(typography).toHaveClass('text-4xl', 'text-brand');
+    expect(typography).toHaveClass('text-[length:var(--ds-font-size-heading-2)]', 'text-brand');
     expect(ref.current).toBe(typography);
   });
 });

@@ -1,0 +1,126 @@
+:root {
+  color-scheme: light;
+
+  /* Semantic colors */
+  --ds-color-brand: var(--ds-primitive-color-blue-600);
+  --ds-color-brand-hover: var(--ds-primitive-color-blue-700);
+  --ds-color-brand-subtle: var(--ds-primitive-color-blue-50);
+  --ds-color-on-brand: var(--ds-primitive-color-white);
+  --ds-color-on-status: var(--ds-primitive-color-white);
+  --ds-color-surface: var(--ds-primitive-color-white);
+  --ds-color-surface-muted: var(--ds-primitive-color-zinc-100);
+  --ds-color-text: var(--ds-primitive-color-zinc-900);
+  --ds-color-text-muted: var(--ds-primitive-color-zinc-600);
+  --ds-color-danger: var(--ds-primitive-color-red-700);
+  --ds-color-danger-subtle: var(--ds-primitive-color-red-50);
+  --ds-color-success: var(--ds-primitive-color-green-700);
+  --ds-color-success-subtle: var(--ds-primitive-color-green-50);
+  --ds-color-warning: var(--ds-primitive-color-amber-700);
+  --ds-color-warning-subtle: var(--ds-primitive-color-amber-50);
+  --ds-color-info: var(--ds-primitive-color-sky-700);
+  --ds-color-info-subtle: var(--ds-primitive-color-sky-50);
+  --ds-color-border: var(--ds-primitive-color-zinc-300);
+  --ds-color-border-strong: var(--ds-primitive-color-zinc-500);
+  --ds-color-focus-ring: var(--ds-primitive-color-focus-blue);
+
+  /* Semantic spacing */
+  --ds-space-0: var(--ds-primitive-space-0);
+  --ds-space-1: var(--ds-primitive-space-1);
+  --ds-space-2: var(--ds-primitive-space-2);
+  --ds-space-3: var(--ds-primitive-space-3);
+  --ds-space-4: var(--ds-primitive-space-4);
+  --ds-space-5: var(--ds-primitive-space-5);
+  --ds-space-6: var(--ds-primitive-space-6);
+  --ds-space-8: var(--ds-primitive-space-8);
+  --ds-space-10: var(--ds-primitive-space-10);
+  --ds-space-12: var(--ds-primitive-space-12);
+  --ds-space-16: var(--ds-primitive-space-16);
+  --ds-space-field-gap: var(--ds-primitive-space-2);
+  --ds-space-component-gap: var(--ds-primitive-space-3);
+  --ds-space-control-x: var(--ds-primitive-space-4);
+  --ds-space-control-y: var(--ds-primitive-size-10);
+  --ds-space-container: var(--ds-primitive-space-6);
+
+  /* Semantic typography */
+  --ds-font-family-sans: var(--ds-primitive-font-family-sans);
+  --ds-font-size-caption: var(--ds-primitive-font-size-12);
+  --ds-font-size-body-small: var(--ds-primitive-font-size-14);
+  --ds-font-size-body: var(--ds-primitive-font-size-16);
+  --ds-font-size-heading-6: var(--ds-primitive-font-size-18);
+  --ds-font-size-heading-5: var(--ds-primitive-font-size-20);
+  --ds-font-size-heading-4: var(--ds-primitive-font-size-24);
+  --ds-font-size-heading-3: var(--ds-primitive-font-size-30);
+  --ds-font-size-heading-2: var(--ds-primitive-font-size-36);
+  --ds-font-size-heading-1: var(--ds-primitive-font-size-48);
+  --ds-line-height-tight: var(--ds-primitive-line-height-110);
+  --ds-line-height-heading: var(--ds-primitive-line-height-125);
+  --ds-line-height-normal: var(--ds-primitive-line-height-150);
+  --ds-line-height-relaxed: var(--ds-primitive-line-height-162);
+  --ds-font-weight-regular: var(--ds-primitive-font-weight-400);
+  --ds-font-weight-medium: var(--ds-primitive-font-weight-500);
+  --ds-font-weight-semibold: var(--ds-primitive-font-weight-600);
+  --ds-font-weight-bold: var(--ds-primitive-font-weight-700);
+  --ds-letter-spacing-tight: var(--ds-primitive-letter-spacing-tight);
+  --ds-letter-spacing-normal: var(--ds-primitive-letter-spacing-normal);
+  --ds-letter-spacing-wide: var(--ds-primitive-letter-spacing-wide);
+
+  /* Semantic sizes */
+  --ds-size-control-small: var(--ds-primitive-size-32);
+  --ds-size-control-medium: var(--ds-primitive-size-40);
+  --ds-size-control-large: var(--ds-primitive-size-48);
+  --ds-size-icon-xsmall: var(--ds-primitive-size-12);
+  --ds-size-icon-small: var(--ds-primitive-size-16);
+  --ds-size-icon-medium: var(--ds-primitive-size-20);
+  --ds-size-icon-large: var(--ds-primitive-size-24);
+  --ds-size-icon-xlarge: var(--ds-primitive-size-32);
+  --ds-size-overlay-small: var(--ds-primitive-size-384);
+  --ds-size-overlay-medium: var(--ds-primitive-size-512);
+  --ds-size-overlay-large: var(--ds-primitive-size-672);
+  --ds-radius-control: var(--ds-primitive-radius-8);
+
+  /* Semantic elevation */
+  --ds-shadow-subtle: var(--ds-primitive-shadow-1);
+  --ds-shadow-control: var(--ds-primitive-shadow-2);
+  --ds-shadow-card: var(--ds-primitive-shadow-3);
+  --ds-shadow-dropdown: var(--ds-primitive-shadow-4);
+  --ds-shadow-tooltip: var(--ds-primitive-shadow-tooltip);
+  --ds-shadow-overlay: var(--ds-primitive-shadow-5);
+  --ds-shadow-dialog: var(--ds-primitive-shadow-6);
+  --ds-shadow-focus: 0 0 0 3px var(--ds-color-focus-ring);
+
+  /* Semantic layers and motion */
+  --ds-z-index-dropdown: var(--ds-primitive-z-50);
+  --ds-z-index-overlay: var(--ds-primitive-z-100);
+  --ds-z-index-popover: var(--ds-primitive-z-105);
+  --ds-z-index-tooltip: var(--ds-primitive-z-110);
+  --ds-z-index-toast: var(--ds-primitive-z-120);
+  --ds-duration-fast: var(--ds-primitive-duration-150);
+  --ds-duration-normal: var(--ds-primitive-duration-220);
+  --ds-duration-slow: var(--ds-primitive-duration-320);
+  --ds-ease-emphasized: var(--ds-primitive-easing-emphasized);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --ds-color-brand: var(--ds-primitive-color-blue-400);
+  --ds-color-brand-hover: var(--ds-primitive-color-blue-300);
+  --ds-color-brand-subtle: var(--ds-primitive-color-blue-950);
+  --ds-color-on-brand: var(--ds-primitive-color-zinc-900);
+  --ds-color-on-status: var(--ds-primitive-color-zinc-900);
+  --ds-color-surface: var(--ds-primitive-color-zinc-900);
+  --ds-color-surface-muted: var(--ds-primitive-color-zinc-800);
+  --ds-color-text: var(--ds-primitive-color-zinc-50);
+  --ds-color-text-muted: var(--ds-primitive-color-zinc-300);
+  --ds-color-danger: var(--ds-primitive-color-red-400);
+  --ds-color-danger-subtle: var(--ds-primitive-color-red-950);
+  --ds-color-success: var(--ds-primitive-color-green-400);
+  --ds-color-success-subtle: var(--ds-primitive-color-green-950);
+  --ds-color-warning: var(--ds-primitive-color-amber-300);
+  --ds-color-warning-subtle: var(--ds-primitive-color-amber-950);
+  --ds-color-info: var(--ds-primitive-color-sky-300);
+  --ds-color-info-subtle: var(--ds-primitive-color-sky-950);
+  --ds-color-border: var(--ds-primitive-color-zinc-700);
+  --ds-color-border-strong: var(--ds-primitive-color-zinc-500);
+  --ds-color-focus-ring: var(--ds-primitive-color-focus-blue-dark);
+}

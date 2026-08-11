@@ -6,11 +6,11 @@ export const spinnerVariants = cva(
     defaultVariants: { size: 'medium', tone: 'brand' },
     variants: {
       size: {
-        xsmall: 'size-3',
-        small: 'size-4',
-        medium: 'size-5',
-        large: 'size-6',
-        xlarge: 'size-8',
+        xsmall: 'size-icon-xsmall',
+        small: 'size-icon-small',
+        medium: 'size-icon-medium',
+        large: 'size-icon-large',
+        xlarge: 'size-icon-xlarge',
       },
       tone: {
         current: 'text-current',
