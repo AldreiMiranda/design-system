@@ -98,3 +98,21 @@
     animation: ds-dialog-backdrop-in var(--ds-duration-slow) ease-out;
   }
 }
+
+@keyframes ds-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ds-toast-out {
+  to {
+    opacity: 0;
+    transform: translateX(1rem) scale(0.98);
+  }
+}
