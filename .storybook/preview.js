@@ -21,7 +21,7 @@ const preview = {
           'Introduction',
           'Changelog',
           'Library',
-          ['Alert', 'Badge', 'Button', 'Checkbox', 'Switch', 'TextField', 'Textarea', 'Select', 'Spinner', 'Skeleton', 'Typography', 'Icon'],
+          ['Alert', 'Badge', 'Button', 'Card', 'Checkbox', 'Switch', 'TextField', 'Textarea', 'Select', 'Spinner', 'Skeleton', 'Typography', 'Icon'],
         ],
       },
     },

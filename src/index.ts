@@ -17,6 +17,21 @@ export type { CheckboxSize } from './components/ui/Checkbox/tokens';
 export { default as Button } from './components/ui/Button/Button';
 export type { ButtonProps } from './components/ui/Button/Button';
 export type { ButtonSize, ButtonVariant } from './components/ui/Button/tokens';
+export {
+  default as Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardMedia,
+} from './components/ui/Card/Card';
+export type {
+  CardContentProps,
+  CardFooterProps,
+  CardHeaderProps,
+  CardMediaProps,
+  CardProps,
+} from './components/ui/Card/Card';
+export type { CardSpacing, CardVariant } from './components/ui/Card/tokens';
 export { default as Icon } from './components/ui/Icon/Icon';
 export type { IconProps } from './components/ui/Icon/Icon';
 export type { IconSize, IconTone } from './components/ui/Icon/tokens';
