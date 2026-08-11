@@ -9,6 +9,13 @@
   --ds-color-text: #18181b;
   --ds-color-text-muted: #52525b;
   --ds-color-danger: #b91c1c;
+  --ds-color-danger-subtle: #fef2f2;
+  --ds-color-success: #15803d;
+  --ds-color-success-subtle: #f0fdf4;
+  --ds-color-warning: #a16207;
+  --ds-color-warning-subtle: #fffbeb;
+  --ds-color-info: #0369a1;
+  --ds-color-info-subtle: #f0f9ff;
   --ds-color-border: #d4d4d8;
   --ds-color-border-strong: #71717a;
   --ds-color-focus-ring: rgb(37 99 235 / 30%);
