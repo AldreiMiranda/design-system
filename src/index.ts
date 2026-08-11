@@ -32,6 +32,22 @@ export type {
   CardProps,
 } from './components/ui/Card/Card';
 export type { CardSpacing, CardVariant } from './components/ui/Card/tokens';
+export {
+  default as Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from './components/ui/Dialog/Dialog';
+export type {
+  DialogDescriptionProps,
+  DialogHeaderProps,
+  DialogProps,
+  DialogTitleProps,
+} from './components/ui/Dialog/Dialog';
+export type { DialogSize } from './components/ui/Dialog/tokens';
 export { default as Icon } from './components/ui/Icon/Icon';
 export type { IconProps } from './components/ui/Icon/Icon';
 export type { IconSize, IconTone } from './components/ui/Icon/tokens';

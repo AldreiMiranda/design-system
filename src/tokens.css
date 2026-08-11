@@ -24,5 +24,6 @@
   --ds-space-control-y: 0.625rem;
   --ds-duration-fast: 150ms;
   --ds-duration-normal: 220ms;
+  --ds-duration-slow: 320ms;
   --ds-ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
 }
